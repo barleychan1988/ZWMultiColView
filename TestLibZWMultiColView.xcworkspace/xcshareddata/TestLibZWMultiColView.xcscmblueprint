@@ -1,0 +1,35 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1db9c1fd-2815-4fc9-a8d1-362314ce3103++8088",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "5af66c20-8b65-0b49-8d7f-06abe0b23fc7++5972" : {
+
+    },
+    "1db9c1fd-2815-4fc9-a8d1-362314ce3103++8088" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5af66c20-8b65-0b49-8d7f-06abe0b23fc7++5972" : 9223372036854775807,
+    "1db9c1fd-2815-4fc9-a8d1-362314ce3103++8088" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4FDD8234-5C67-4292-8704-177F9781C6D0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5af66c20-8b65-0b49-8d7f-06abe0b23fc7++5972" : "",
+    "1db9c1fd-2815-4fc9-a8d1-362314ce3103++8088" : "ios_database_mine\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TestLibZWMultiColView",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "common\/ZWMultiColView-static\/TestLibZWMultiColView.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/localhost",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1db9c1fd-2815-4fc9-a8d1-362314ce3103++8088"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.2.49:81\/svn\/JGW",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5af66c20-8b65-0b49-8d7f-06abe0b23fc7++5972"
+    }
+  ]
+}
