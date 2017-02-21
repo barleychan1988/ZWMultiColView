@@ -147,12 +147,12 @@
     if ([subview isKindOfClass:[UILabel class]])
     {
         UILabel *l = (UILabel *)subview;
-        fRetMaxWidth = [l.text sizeWithFont:l.font].width;
+        fRetMaxWidth = [l.text sizeWithAttributes:@{NSFontAttributeName:l.font}].width;
     }
     else if ([subview isKindOfClass:[UIButton class]])
     {
         UIButton *btn = (UIButton *)subview;
-        fRetMaxWidth = [btn.titleLabel.text sizeWithFont:btn.titleLabel.font].width;
+        fRetMaxWidth = [btn.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:btn.titleLabel.font}].width;
     }
     fRetMaxWidth += 6;
     return fRetMaxWidth;
@@ -166,7 +166,7 @@
     NSString *strKey;
     for (NSInteger i = 0; i < [m_mtArrayColumnGridCells count]; i++)
     {
-        strKey = [NSString stringWithFormat:@"%d", i];
+        strKey = [NSString stringWithFormat:@"%ld", (long)i];
         subview = (UIView *)[m_mtArrayColumnGridCells objectAtIndex:i];
         frame = subview.frame;
         frame.origin.x = x;

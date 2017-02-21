@@ -343,7 +343,7 @@
 {
     BOOL bWidthColumnChanged = NO;
     CGFloat fWidth = [m_viewTopHeader widthForColumnText:nCol];
-    NSString *strKey = [[NSString stringWithFormat:@"%d", nCol] retain];
+    NSString *strKey = [[NSString stringWithFormat:@"%ld", (long)nCol] retain];
     NSNumber *numWidth = [(NSNumber *)[m_mtDicColumnWidths objectForKey:strKey] retain];
     if (numWidth == nil || fWidth > numWidth.floatValue)
     {
@@ -450,7 +450,7 @@
     }
     if (!bHasAlready)
         [_arrayBackgroundColorSetted addObject:indexPath];
-    NSString *strKey = [[NSString stringWithFormat:@"%d", indexPath.row] retain];
+    NSString *strKey = [[NSString stringWithFormat:@"%ld", (long)indexPath.row] retain];
     [m_mtDicRowBkgndColor setObject:color forKey:strKey];
     
 //    UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath];
@@ -469,7 +469,7 @@
         if (indexPath.row == index.row && index.section == indexPath.section)
         {
             [_arrayBackgroundColorSetted removeObject:index];
-            NSString *strKey = [[NSString stringWithFormat:@"%d", indexPath.row] retain];
+            NSString *strKey = [[NSString stringWithFormat:@"%ld", (long)indexPath.row] retain];
             [m_mtDicRowBkgndColor removeObjectForKey:strKey];
             [strKey release];
             break;
@@ -485,7 +485,7 @@
         ZWMultiColTbvCell *cell = [self cellForRowAtIndexPath:index];
         cell.colorSelected = nil;
         
-        NSString *strKey = [[NSString stringWithFormat:@"%d", index.row] retain];
+        NSString *strKey = [[NSString stringWithFormat:@"%ld", (long)index.row] retain];
         [m_mtDicRowBkgndColor removeObjectForKey:strKey];
         [strKey release];
         [_arrayBackgroundColorSetted removeObject:index];
@@ -519,7 +519,7 @@
     {
         if (index.row == indexPath.row && indexPath.section == index.section)
         {
-            NSString *strKey = [[NSString stringWithFormat:@"%d", indexPath.row] retain];
+            NSString *strKey = [[NSString stringWithFormat:@"%ld", (long)indexPath.row] retain];
             cell.colorSelected = [m_mtDicRowBkgndColor objectForKey:strKey];
             [strKey release];
             break;
@@ -685,7 +685,7 @@
 - (CGFloat)ZWMultiColTableView:(ZWMultiColTableView*)multiColTableView widthAtColumn:(NSInteger)nCol //if not implement, default is the width of grid text;
 {
     CGFloat fRet = 0.0;
-    NSString *strKey = [[NSString stringWithFormat:@"%d", nCol] retain];
+    NSString *strKey = [[NSString stringWithFormat:@"%ld", (long)nCol] retain];
     NSNumber *num;
     if (m_bAutoAdjustGridWidthToFitText)
     {

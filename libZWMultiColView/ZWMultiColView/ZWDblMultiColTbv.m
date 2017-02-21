@@ -310,7 +310,7 @@
         btnTip.hidden = YES;
     }
     CGRect rect;
-    CGSize size = [strMsg sizeWithFont:[UIFont systemFontOfSize:[UIFont buttonFontSize]]];
+    CGSize size = [strMsg sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:[UIFont buttonFontSize]]}];
     if (size.width > 200)
     {
         size.width = 200;
@@ -636,7 +636,7 @@
         if (m_bRespondsToShowTipMsg)
             return [self showTip:[dataSource showTipMsgAtIndexPath:indexPath]];
         if (indexPath != nil)
-            [self showTip:[NSString stringWithFormat:@"%d", indexPath.row + 1]];
+            [self showTip:[NSString stringWithFormat:@"%ld", (long)indexPath.row + 1]];
     }
 }
 
@@ -719,7 +719,7 @@
 - (CGFloat)dblMultiColTbv:(ZWDblMultiColTbv *)multiColTbv widthForLeftAtColumn:(NSInteger)nCol
 {
     CGFloat fRet = ([self widthForLeft:self] - m_fWidthNormalSeparatorLine) / [self numberOfColumnsOnLeft:self] - m_fWidthNormalSeparatorLine;
-    NSString *strKey = [[NSString stringWithFormat:@"%d", nCol] retain];
+    NSString *strKey = [[NSString stringWithFormat:@"%ld", (long)nCol] retain];
     NSNumber *num;
     if (m_bAutoAdjustLeftColumnWidthToText)
     {
@@ -779,7 +779,7 @@
         fRet -= [self widthForLeft:self];
     fRet = (fRet - m_fWidthNormalSeparatorLine) / [dataSource numberOfColumnsOnRight:self];
     fRet -= m_fWidthNormalSeparatorLine;
-    NSString *strKey = [[NSString stringWithFormat:@"%d", nCol] retain];
+    NSString *strKey = [[NSString stringWithFormat:@"%ld", (long)nCol] retain];
     NSNumber *num;
     if (m_bAutoAdjustRightColumnWidthToText)
     {

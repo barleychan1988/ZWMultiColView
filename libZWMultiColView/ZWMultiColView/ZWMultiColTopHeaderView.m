@@ -201,7 +201,7 @@
     if ([strViewClassName compare:@"UILabel"] == NSOrderedSame)
     {
         UILabel *l = (UILabel *)subview;
-        fRetMaxWidth = [l.text sizeWithFont:l.font].width;
+        fRetMaxWidth = [l.text sizeWithAttributes:@{NSFontAttributeName:l.font}].width;
         fRetMaxWidth += 6;
     }
     return fRetMaxWidth;
@@ -215,7 +215,7 @@
     NSString *strKey;
     for (NSInteger i = 0; i < [m_mtArraySubviews count]; i++)
     {
-        strKey = [NSString stringWithFormat:@"%d", i];
+        strKey = [NSString stringWithFormat:@"%ld", (long)i];
         subview = (UIView *)[m_mtArraySubviews objectAtIndex:i];
         frame = subview.frame;
         frame.origin.x = x;
